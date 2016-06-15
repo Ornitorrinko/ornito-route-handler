@@ -8,7 +8,7 @@
     "url": "https://github.com/Ornitorrinko/ornito-route-handler"
   },
   "keywords": [
-    "expressjs"
+    "expressjs", "ornito", "router", "handler"
   ],
   "author": "Vinicius Mesquita <vinicius@ornitorrinko.com>",
   "license": "MIT",
