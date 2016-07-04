@@ -1,6 +1,6 @@
 {
   "name": "ornito-route-handler",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "Default setup for the endpoints built with Node.js stack",
   "main": "index.js",
   "repository": {

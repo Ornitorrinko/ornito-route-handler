@@ -22,7 +22,6 @@ module.exports = function(data) {
 
 	for (let i = route_map.length - 1; i >= 0; i--) {
 		if (isRoute(route_map[i].router)) {
-			console.log(route_map[i]);
 			app.use("/" + route_map[i].url, route_map[i].router);
 		}
 	}
@@ -45,13 +44,11 @@ function handleError(err, req, res, next) {
 
 	var msg = err.message;
 	if (msg === "EmptyResponse") {
-		res.status(202).json({
-			data: []
-		});
+		res.status(404).end();
 	} else {
 		var error = buildError(err);
 		if (err.reason) {
-			res.status(404).json(error);
+			res.status(500).json(error);
 		} else {
 			res.json(error);
 		}
